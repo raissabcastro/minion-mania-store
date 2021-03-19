@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    <title>Minion-Mania</title>
+    
+</head>
+<body>
+
+    <div id="container"></div>
+    
+    </div>
+    
+    
+    <h2 class="cabecalho">UM MINION PARA CHAMAR DE SEU!!!</h2>
+    <div id="like_button_container"></div>
+   
+    
+    
+    <div id="Produtos">
+
+        
+        <form action="/send-email
+        " class="formulario" method="post"> 
+            <div class="caixa_form">
+            <p class="reserva"> Reserve preenchendo o formulário abaixo:</p>
+    
+    
+            <div class="field">
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required>
+            </div>
+
+            <div class="field">
+                <label for="nome">Nome do seu Minion:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite qual Minion*" required>
+            </div>
+    
+            <div class="field">
+                <label for="email">Seu E-Mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu E-Mail*" required>
+            </div>        
+            <div class="field radiobox">
+                <span>Deseja receber nossas novidades?</span>
+                <input type="radio" name="novidades" id="sim" value="sim" checked><label for="sim">Sim</label>
+                <input type="radio" name="novidades" id="nao" value="nao"><label for="nao">Não</label>
+
+                <input type="submit" class="button" value="ENVIAR">
+               
+                
+            </div>
+           
+
+            </div>
+    
+        </form>
+    </div>
+    </div> 
+        
+
+</div>
+
+
+    <script id="minions_caixas">
+
+        
+
+        const items = [
+        {
+            id: 0,
+            nome: "Minion Donnie",
+            img: "imagens/minions_4.jpg",
+            quantidade: 0
+        },
+
+        {
+            id: 1,
+            nome: "Minion Stuart",
+            img: "imagens/minions_2.jpg",
+            quantidade: 0
+        },
+
+        {
+            id: 2,
+            nome: "Minion Tim",
+            img: "imagens/minion_5.jpg",
+            quantidade: 0
+        },
+
+    ]
+        
+        
+        inicializarLoja = () => {
+            var containerProdutos = document.getElementById('Produtos');
+            items.map((val)=>{
+                containerProdutos.innerHTML+= `
+                
+                <div class="produto-single">
+                    <img src="`+val.img+`" />
+                    <p>`+val.nome+`</p>
+                    <a key="`+val.id+`" href="#"> Encomende o seu!</a>  
+                         
+                </div>
+                       
+                `;
+                
+            })
+        }
+
+        
+
+        inicializarLoja();
+        
+        
+
+    </script>
+
+        <div id="rodape">
+            
+            <span>
+                 &copy; Copyright 1992-2021 Raíssa Castro
+             </span>
+             
+</div>
+
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react@17/umd/react-dom.development.js" crossorigin></script>
+<script src="like_button.js" crossorigin></script>
+<script type="text/javascript"></script>
+
+
+</body>
+
+
+
+</html>
